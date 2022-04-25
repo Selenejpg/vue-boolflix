@@ -5,11 +5,11 @@
         <div class="" v-for="(element, index) in film" :key="index">
           <div class="">
             <img  class="img-fluid" :src="element.poster_path" alt="">
-            <h3 class="">{{element.title}}</h3>
-            <h4 class="">{{element.original_title}}</h4>
-            <h4 class="">{{element.overview}}</h4>
-            <h4 class="">{{element.language}}</h4>
-            <h4 class="">{{element.vote_average}}</h4>
+            <span class="">{{element.title}}</span>
+            <span class="">{{element.original_title}}</span>
+            <span class="">{{element.overview}}</span>
+            <span class="">{{element.language}}</span>
+            <span class="">{{element.vote_average}}</span>
           </div>                
         </div>
       </div> 

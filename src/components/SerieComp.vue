@@ -5,11 +5,11 @@
         <div class="" v-for="(element, index) in serie" :key="index">
           <div class="">
             <img  class="img-fluid" :src="element.backdrop_path" alt="">
-            <h3 class="">{{element.name}}</h3>
-            <h4 class="">{{element.original_name}}</h4>
-            <h4 class="">{{element.overview}}</h4>
-            <h4 class="">{{element.original_language}}</h4>
-            <h4 class="">{{element.vote_average}}</h4>
+            <span class="">{{element.name}}</span>
+            <span class="">{{element.original_name}}</span>
+            <span class="">{{element.overview}}</span>
+            <span class="">{{element.original_language}}</span>
+            <span class="">{{element.vote_average}}</span>
           </div>                
         </div>
       </div> 
