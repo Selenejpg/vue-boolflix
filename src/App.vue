@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <HeaderComp/>
-      <MainComp/>
+      <MainComp :propsArrayFilm="film" :propsArraySerie="serie"/>
     </header>
   </div>
 </template>

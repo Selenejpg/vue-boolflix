@@ -1,12 +1,9 @@
 <template>
-  <div id="app">
    <main> 
-     <FilmComp/>
-     <SerieComp/>
+     <FilmComp :propsArrayFilm2="propsArrayFilm"/>
+     <SerieComp :propsArraySerie2="propsArraySerie"/>
      <CardComp/>
    </main>
-    
-  </div>
 </template>
 
 <script>
@@ -18,11 +15,16 @@ import CardComp from './partials/CardComp.vue'
 
 export default {
   //Cambiare il nome con quello del componente creato
-  name: 'App',
+  name: 'MainComp',
   components: {
     FilmComp,
     SerieComp,
     CardComp
+  },
+  props: {
+    //ricevere dati tramite props
+    propsArrayFilm: Array,
+    propsArraySerie: Array
   }
 }
 </script>
