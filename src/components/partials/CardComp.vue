@@ -1,8 +1,7 @@
 <template>
-  <header>
-    <!--inserire contenuto componente-->
-    ciao
-  </header>
+  <main>
+    
+  </main>
 </template>
 
 <script>

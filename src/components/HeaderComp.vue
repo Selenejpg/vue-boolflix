@@ -1,7 +1,6 @@
 <template>
   <header>
-    <!--inserire contenuto componente-->
-    ciao
+   
   </header>
 </template>
 

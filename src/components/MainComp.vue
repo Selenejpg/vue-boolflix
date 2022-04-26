@@ -13,7 +13,7 @@
 import "bootstrap"
 import FilmComp from './components/FilmComp.vue'
 import SerieComp from './components/SerieComp.vue'
-import CardComp from './components/CardComp.vue'
+import CardComp from 'src/components/partials/CardComp.vue'
 
 
 export default {
