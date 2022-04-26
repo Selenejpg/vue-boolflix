@@ -1,16 +1,32 @@
 <template>
-  <header>
-   
-  </header>
+  <div id="app">
+   <main> 
+     <FilmComp/>
+     <SerieComp/>
+     <CardComp/>
+   </main>
+    
+  </div>
 </template>
 
 <script>
+import "bootstrap"
+import FilmComp from './components/FilmComp.vue'
+import SerieComp from './components/SerieComp.vue'
+import CardComp from './components/CardComp.vue'
+
+
 export default {
   //Cambiare il nome con quello del componente creato
-  name: 'SerieComp',
+  name: 'App',
+  components: {
+    FilmComp,
+    SerieComp,
+    CardComp
+  }
 }
 </script>
 
-<style scoped lang="scss">
- /*Inserire style componente*/
+<style lang="scss">
+@import "bootstrap/dist/css/bootstrap.min.css";
 </style>
