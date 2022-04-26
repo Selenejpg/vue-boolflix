@@ -11,9 +11,9 @@
 
 <script>
 import "bootstrap"
-import FilmComp from './components/FilmComp.vue'
-import SerieComp from './components/SerieComp.vue'
-import CardComp from 'src/components/partials/CardComp.vue'
+import FilmComp from './partials/FilmComp.vue'
+import SerieComp from './partials/SerieComp.vue'
+import CardComp from './partials/CardComp.vue'
 
 
 export default {
