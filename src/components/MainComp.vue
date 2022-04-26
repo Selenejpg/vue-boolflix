@@ -1,7 +1,23 @@
 <template>
    <main> 
-     <FilmComp :propsArrayFilm2="propsArrayFilm"/>
-     <SerieComp :propsArraySerie2="propsArraySerie"/>
+     <FilmComp :propsArrayFilm2="propsArrayFilm"
+      v-for="( element, index ) in propsArrayFilm"
+      :key="index"
+      :poster="element.poster_path"
+      :title="element.title"
+      :ogtitle="element.original_title"
+      :language="element.original_language"
+      :vote="element.vote_average"/>
+
+     <SerieComp :propsArraySerie2="propsArraySerie"
+      v-for="( subelement, subindex ) in propsArraySerie"
+      :key="subindex"
+      :poster="subelement.poster_path"
+      :name="subelement.name"
+      :ogname="subelement.original_name"
+      :language="subelement.original_language"
+      :vote="subelement.vote_average"/>
+
      <CardComp/>
    </main>
 </template>
