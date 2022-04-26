@@ -1,5 +1,6 @@
 <template>
    <main> 
+     <h1 class="text-center">Film</h1>
      <FilmComp :propsArrayFilm2="propsArrayFilm"
       v-for="( element, index ) in propsArrayFilm"
       :key="index"
@@ -9,6 +10,7 @@
       :language="element.original_language"
       :vote="element.vote_average"/>
 
+      <h1 class="text-center">Serie</h1>
      <SerieComp :propsArraySerie2="propsArraySerie"
       v-for="( subelement, subindex ) in propsArraySerie"
       :key="subindex"

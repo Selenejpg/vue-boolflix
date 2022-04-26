@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="row row-column text-center">
     <img :src="poster" alt="" class="">
     <span class="">{{name}}</span>
     <span class="">{{ogname}}</span>
