@@ -9,9 +9,17 @@
       <span class="">{{ogtitle}}</span>
       <div class="d-flex align-items-center justify-content-center">
         <span>Lingua: </span>
-        <span class="flag ms-2" :class="(propsArrayFilm2.language == 'en') ? 'flag-en' : (propsArrayFilm2.language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
+        <span class="flag ms-2" :class="(language == 'en') ? 'flag-en' : (propsArrayFilm2.language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
       </div>
-      <span class="">{{vote}}</span>
+      <p class="card-text" id="star">
+        {{propsArrayFilm2.vote}}
+        <i
+          v-for="i in 5"
+          :key="i"
+          class="fa-star"
+          :class="(i = stelline()) ? 'fa-solid' : 'fa-regular'"
+        ></i>
+      </p> 
       <span class="">{{overview}}</span>
     </div>  
   </div>
@@ -32,7 +40,10 @@ export default {
     overview: String
   },
   methods: {
-    
+    stelline(){
+      const votoStelline = Math.ceil(this.vote)
+      return votoStelline
+    }
   }
 }
 </script>

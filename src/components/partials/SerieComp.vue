@@ -10,8 +10,16 @@
       <div class="d-flex align-items-center justify-content-center">
         <span>Lingua: </span>
         <span class="flag ms-2" :class="(language == 'en') ? 'flag-en' : (language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
-      </div> 
-      <span class="">{{vote}}</span>
+      </div>
+      <p class="card-text" id="star">
+        {{propsArraySerie2.vote}}
+        <i
+          v-for="i in 5"
+          :key="i"
+          class="fa-star"
+          :class="(i = stelline()) ? 'fa-solid' : 'fa-regular'"
+        ></i>
+      </p> 
       <span class="">{{overview}}</span>
     </div>
   </div>
@@ -24,7 +32,6 @@ export default {
   props: {
     //ricevere dati tramite props
     propsArraySerie2: Array,
-    film: Object,
     poster: String,
     name: String,
     ogname: String,
@@ -32,6 +39,13 @@ export default {
     vote: Number,
     overview: String
    
+  },
+  methods: {
+    stelline(){
+      const votoStelline = Math.ceil(this.vote)
+      return votoStelline
+    }
+    
   }
 }
 </script>
