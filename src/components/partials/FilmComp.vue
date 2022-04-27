@@ -18,10 +18,10 @@
           v-for="i in 5"
           :key="i"
           class="fa-star"
-          :class="(i = stelline()) ? 'fa-solid' : 'fa-regular'"
+          :class="(i <= stelline()) ? 'fa-solid' : 'fa-regular'"
         ></i>
       </p> 
-      
+
       <span class="">{{overview}}</span>
     </div>  
   </div>
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     stelline(){
-      const votoStelline = Math.ceil(this.vote)
+      const votoStelline = Math.ceil(this.vote) / 2
       return votoStelline
     }
   }
