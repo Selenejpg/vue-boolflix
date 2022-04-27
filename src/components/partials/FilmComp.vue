@@ -1,13 +1,13 @@
 <template>
-  <div class="row row-column text-center">
-    <div class="d-flex justify-content-center">
+  <div class="width-img">
+    <div class="">
       <img :src="`https://image.tmdb.org/t/p/w342/${poster}`" alt="" class="poster">
     </div>
 
-    <div class="d-flex flex-column justify-content-center">
+    <div class="d-none">
       <span class="">{{title}}</span>
       <span class="">{{ogtitle}}</span>
-      <div class="d-flex align-items-center justify-content-center">
+      <div class="">
         <span>Lingua: </span>
         <span class="flag ms-2" :class="(language == 'en') ? 'flag-en' : (propsArrayFilm2.language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
       </div>
@@ -72,6 +72,10 @@ export default {
   }
 
   .poster{
-    width: 10%;
+    width: 100%;
+  }
+
+  .width-img{
+    max-width: 12% !important;
   }
 </style>

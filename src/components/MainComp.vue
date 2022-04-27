@@ -1,7 +1,9 @@
 <template>
-   <main> 
-     <h1 class="text-center">Film</h1>
-     <FilmComp :propsArrayFilm2="propsArrayFilm"
+   <main class="bg-black p-3 text-white"> 
+
+     <h1 class="ms-2 mt-2 mb-4">Film</h1>
+     <div class="ms-2 d-flex flex-wrap">
+      <FilmComp :propsArrayFilm2="propsArrayFilm"
       v-for="( element, index ) in propsArrayFilm"
       :key="index"
       :poster="element.poster_path"
@@ -10,17 +12,22 @@
       :language="element.original_language"
       :vote="element.vote_average"
       :overview="element.overview"/>
+     </div>
 
-      <h1 class="text-center">Serie</h1>
-     <SerieComp :propsArraySerie2="propsArraySerie"
-      v-for="( subelement, subindex ) in propsArraySerie"
-      :key="`A${subindex}`"
-      :poster="subelement.poster_path"
-      :name="subelement.name"
-      :ogname="subelement.original_name"
-      :language="subelement.original_language"
-      :vote="subelement.vote_average"
-      :overview="subelement.overview"/>
+      <h1 class="ms-2 mt-5 mb-4">Serie</h1>
+      <div class="ms-2 d-flex flex-wrap">
+        <SerieComp :propsArraySerie2="propsArraySerie"
+        v-for="( subelement, subindex ) in propsArraySerie"
+        :key="`A${subindex}`"
+        :poster="subelement.poster_path"
+        :name="subelement.name"
+        :ogname="subelement.original_name"
+        :language="subelement.original_language"
+        :vote="subelement.vote_average"
+        :overview="subelement.overview"/>
+      </div>
+      
+     
 
      
    </main>
@@ -49,4 +56,14 @@ export default {
 
 <style lang="scss">
 @import "bootstrap/dist/css/bootstrap.min.css";
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  .bg-black{
+    background-color: #1b1b1b;
+  }
 </style>
