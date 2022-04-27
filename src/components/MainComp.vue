@@ -1,7 +1,7 @@
 <template>
    <main class="bg-black p-3 text-white"> 
 
-     <h1 class="ms-2 mt-2 mb-4">Film</h1>
+     <h1 class="ms-2 mb-4">Film</h1>
      <div class="ms-2 d-flex flex-wrap">
       <FilmComp :propsArrayFilm2="propsArrayFilm"
       v-for="( element, index ) in propsArrayFilm"
