@@ -1,6 +1,6 @@
 <template>
-  <div class="row row-column text-center">
-    <img :src="poster" alt="" class="">
+  <div class="row row-column text-center d-flex justify-content-center">
+    <img :src="`https://image.tmdb.org/t/p/w342/${poster}`" alt="" class="poster">
     <span class="">{{name}}</span>
     <span class="">{{ogname}}</span>
     <div class="d-flex align-items-center justify-content-center">
@@ -47,5 +47,9 @@ export default {
 
   .flag-unknown {
     background-image: url(../../assets/globe.png);
+  }
+
+  .poster{
+    width: 10%;
   }
 </style>
