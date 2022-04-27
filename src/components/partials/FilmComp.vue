@@ -1,13 +1,19 @@
 <template>
-  <div class="row row-column text-center d-flex justify-content-center">
-    <img :src="`https://image.tmdb.org/t/p/w342/${poster}`" alt="" class="poster">
-    <span class="">{{title}}</span>
-    <span class="">{{ogtitle}}</span>
-    <div class="d-flex align-items-center justify-content-center">
-      <span>Lingua: </span>
-      <span class="flag ms-2" :class="(propsArrayFilm2.language == 'en') ? 'flag-en' : (propsArrayFilm2.language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
+  <div class="row row-column text-center">
+    <div class="d-flex justify-content-center">
+      <img :src="`https://image.tmdb.org/t/p/w342/${poster}`" alt="" class="poster">
     </div>
-    <span class="">{{vote}}</span>
+
+    <div class="d-flex flex-column justify-content-center">
+      <span class="">{{title}}</span>
+      <span class="">{{ogtitle}}</span>
+      <div class="d-flex align-items-center justify-content-center">
+        <span>Lingua: </span>
+        <span class="flag ms-2" :class="(propsArrayFilm2.language == 'en') ? 'flag-en' : (propsArrayFilm2.language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
+      </div>
+      <span class="">{{vote}}</span>
+      <span class="">{{overview}}</span>
+    </div>  
   </div>
 </template>
 
@@ -23,6 +29,7 @@ export default {
     ogtitle: String,
     language: String,
     vote: Number,
+    overview: String
   },
   methods: {
     

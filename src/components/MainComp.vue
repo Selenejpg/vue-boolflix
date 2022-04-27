@@ -8,7 +8,8 @@
       :title="element.title"
       :ogtitle="element.original_title"
       :language="element.original_language"
-      :vote="element.vote_average"/>
+      :vote="element.vote_average"
+      :overview="element.overview"/>
 
       <h1 class="text-center">Serie</h1>
      <SerieComp :propsArraySerie2="propsArraySerie"
@@ -18,7 +19,8 @@
       :name="subelement.name"
       :ogname="subelement.original_name"
       :language="subelement.original_language"
-      :vote="subelement.vote_average"/>
+      :vote="subelement.vote_average"
+      :overview="subelement.overview"/>
 
      
    </main>
