@@ -5,15 +5,15 @@
       <img :src="`https://image.tmdb.org/t/p/w342/${poster}`" alt="" class="poster dimensioni">
     </div>
 
-    <div class="flip-card-back p-2 overflow font-size">
+    <div class="flip-card-back pt-2 p-2 overflow font-size">
       <div class="">Titolo: {{name}}</div>
-      <div class="">Titolo originale: {{ogname}}</div>
-      <div class="">
-        <span>Lingua: </span>
+      <div class="pt-2">Titolo originale: {{ogname}}</div>
+      <div class="d-flex align-ites-center justify-content-center mt-2">
+        <span class="mt-1">Lingua: </span>
         <span class="flag ms-2" :class="(language == 'en') ? 'flag-en' : (language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
       </div>
 
-      <p class="card-text" id="star">
+      <p class="card-text pt-2" id="star">
         {{propsArraySerie2.vote}}
         <i
           v-for="i in 5"
@@ -84,7 +84,7 @@ export default {
   }
 
   .font-size{
-    font-size: 15px;
+    font-size: 10px;
   }
 
 
@@ -130,7 +130,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.561);
   color: white;
   transform: rotateY(180deg);
-  width: 205px;
+  width: 202px;
 }
 
 
