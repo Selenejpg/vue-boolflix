@@ -31,7 +31,7 @@ export default {
   methods: {
     searchMovies( filmCercato ){
       this.testoCercato = filmCercato
-      axios.get( 'https://api.themoviedb.org/3/search/movie?api_key=12a60b0a52be8853f488359f4a303575&language=it-IT&page=1&include_adult=false&query=star' )
+      axios.get( `https://api.themoviedb.org/3/search/movie?api_key=12a60b0a52be8853f488359f4a303575&language=it-IT&page=1&include_adult=false&query=${filmCercato}` )
          .then( ( res )=>{
            console.log( res.data.results );
            this.film = res.data.results
@@ -40,7 +40,7 @@ export default {
            console.log( error )
          } )
 
-      axios.get( 'https://api.themoviedb.org/3/search/tv?api_key=12a60b0a52be8853f488359f4a303575&language=it-IT&page=1&include_adult=false&query=love' )
+      axios.get( `https://api.themoviedb.org/3/search/tv?api_key=12a60b0a52be8853f488359f4a303575&language=it-IT&page=1&include_adult=false&query=${filmCercato}` )
           .then( ( res )=>{
             console.log( res.data.results );
             this.serie = res.data.results
@@ -50,15 +50,7 @@ export default {
             console.log(filmCercato)
           } )
       }
-    },
-    filmCercato() {
-      if( this.film === '' ){
-        return this.testoCercato
-      } else{
-        return this.testoCercato.filter( (elem) => {
-          return elem.name.toLowerCase().includes(this.film.toLowerCase())
-        } )
-      }}
+    }
   } 
 
 </script>

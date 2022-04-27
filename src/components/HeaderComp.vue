@@ -8,10 +8,10 @@
       <input
       type="text" class="w-90 me-2 form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
         v-model="testoCercato"
-        @keydown.enter.prevent="$emit('search', testoCercato)">
+        @keydown.enter="$emit('search', testoCercato)">
 
       <button type="button" class="btn btn-primary"
-        @click.prevent="$emit('search', testoCercato)">Primary</button>
+        @click="$emit('search', testoCercato)">Primary</button>
 
     </div>
   </header>

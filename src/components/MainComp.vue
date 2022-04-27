@@ -13,14 +13,14 @@
       <h1 class="text-center">Serie</h1>
      <SerieComp :propsArraySerie2="propsArraySerie"
       v-for="( subelement, subindex ) in propsArraySerie"
-      :key="subindex"
+      :key="`A${subindex}`"
       :poster="subelement.poster_path"
       :name="subelement.name"
       :ogname="subelement.original_name"
       :language="subelement.original_language"
       :vote="subelement.vote_average"/>
 
-     <CardComp/>
+     
    </main>
 </template>
 
@@ -28,7 +28,6 @@
 import "bootstrap"
 import FilmComp from './partials/FilmComp.vue'
 import SerieComp from './partials/SerieComp.vue'
-import CardComp from './partials/CardComp.vue'
 
 
 export default {
@@ -36,8 +35,7 @@ export default {
   name: 'MainComp',
   components: {
     FilmComp,
-    SerieComp,
-    CardComp
+    SerieComp
   },
   props: {
     //ricevere dati tramite props

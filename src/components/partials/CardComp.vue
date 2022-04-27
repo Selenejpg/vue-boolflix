@@ -7,7 +7,7 @@
 <script>
 export default {
   //Cambiare il nome con quello del componente creato
-  name: 'HeaderComp',
+  name: 'CardComp',
 }
 </script>
 
