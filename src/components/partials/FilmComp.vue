@@ -3,7 +3,10 @@
     <img :src="poster" alt="" class="">
     <span class="">{{title}}</span>
     <span class="">{{ogtitle}}</span>
-    <span class="">{{language}}</span>
+    <div class="d-flex align-items-center justify-content-center">
+      <span>Lingua: </span>
+      <span class="flag ms-2" :class="(propsArrayFilm2.language == 'en') ? 'flag-en' : (propsArrayFilm2.language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
+    </div>
     <span class="">{{vote}}</span>
   </div>
 </template>
@@ -20,10 +23,31 @@ export default {
     ogtitle: String,
     language: String,
     vote: Number,
+  },
+  methods: {
+    
   }
 }
 </script>
 
 <style scoped lang="scss">
- /*Inserire style componente*/
+  .flag {
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  .flag-en {
+    background-image: url(../../assets/GB-United-Kingdom-Flag-icon.png);
+  }
+
+  .flag-it {
+    background-image: url(../../assets/italian_flag.png);
+  }
+
+  .flag-unknown {
+    background-image: url(../../assets/globe.png);
+  }
 </style>
