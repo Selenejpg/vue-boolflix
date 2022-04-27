@@ -11,6 +11,7 @@
         <span>Lingua: </span>
         <span class="flag ms-2" :class="(language == 'en') ? 'flag-en' : (language == 'it') ? 'flag-it' : 'flag-unknown' "></span>
       </div>
+
       <p class="card-text" id="star">
         {{propsArraySerie2.vote}}
         <i
@@ -20,6 +21,7 @@
           :class="(i = stelline()) ? 'fa-solid' : 'fa-regular'"
         ></i>
       </p> 
+      
       <span class="">{{overview}}</span>
     </div>
   </div>
